@@ -1,17 +1,13 @@
-# base image
-FROM python:3
+#FROM python:3.7.3-stretch
+FROM httpd:2.4
 
-ENV PYTHONUNBUFFERED 1
-# working directory
+# Working Directory
 WORKDIR /app
-# add all files to working directory
-COPY . /app
-COPY manage.py /app
-RUN pip install -r requirements.txt
-RUN pip install pylint==2.9.2
-#Expose port 80
+
+# Copy source code to working directory
+COPY ./HelloWorld/* /app/
+
+
+# Expose port 80
 EXPOSE 80
-#ADD . /app
-CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
-#CMD: ["python", "manage.py", "runserver", "0.0.0.0:80" ]
-#command: [ "python", "./manage.py runserver 0.0.0.0:8000" ]
+
