@@ -5,7 +5,7 @@ FROM httpd:2.4
 WORKDIR /app
 
 # Copy source code to working directory
-COPY ./HelloWorld/* /app/
+COPY . /app/
 
 
 # Expose port 80
