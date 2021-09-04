@@ -4,14 +4,14 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-#docker build --tag=myweather .
-docker build -t ankesh9323/my-weather:1.0 .
+docker build --tag=capstone .
+
 
 # Step 2: 
 # List docker images
 docker image ls
 
 # Step 3: 
-# Run flask app
+# Run helloWorld app
 #docker run -it ndproj4 bash
- docker run -p 8000:80 myweather
+ docker run -p 8000:80 capstone
